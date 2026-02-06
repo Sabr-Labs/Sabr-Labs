@@ -12,7 +12,10 @@ const FounderCard: React.FC<FounderCardProps> = ({ name, role, bio, initials }) 
     <div className="card bg-base-100 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-[1.02]">
       <div className="card-body items-center text-center">
         <div className="avatar placeholder mb-6">
-          <div className="bg-gradient-to-br from-primary-cyan to-mid-blue text-white rounded-full w-32 h-32">
+          <div 
+            className="bg-gradient-to-br from-primary-cyan to-mid-blue text-white rounded-full w-32 h-32"
+            aria-label={`${name}'s profile picture`}
+          >
             <span className="text-4xl font-bold">{initials}</span>
           </div>
         </div>

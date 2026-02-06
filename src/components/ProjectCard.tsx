@@ -15,7 +15,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, features,
         <figure className="px-6 pt-6">
           <img 
             src={imageSrc} 
-            alt={`${title} screenshot`} 
+            alt={`${title} logo`} 
             className="rounded-xl w-full h-48 object-cover shadow-md"
           />
         </figure>
