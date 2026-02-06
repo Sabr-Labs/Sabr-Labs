@@ -2,148 +2,106 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
-import ProjectCard from '../components/ProjectCard';
 import Footer from '../components/Footer';
 ---
 
-<Layout title="Sabr Labs - Next Generation Data Science">
+<Layout title="Sabr Labs - Software for Everyday Life">
   <Navbar client:load />
   <Hero client:load />
 
-  <!-- Expertise Section -->
-  <section id="expertise" class="py-20 bg-white">
-    <div class="container mx-auto px-6">
-      <div class="text-center mb-16">
-        <p class="text-brand-blue text-xs font-semibold uppercase tracking-widest mb-3">Our Expertise</p>
-        <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4">Built for the Modern Enterprise</h2>
-        <p class="text-gray-500 max-w-2xl mx-auto">
-          We specialize in delivering high-impact solutions across the entire data lifecycle.
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-        <!-- Machine Learning -->
-        <div class="bg-white border border-gray-100 rounded-2xl p-8 hover:shadow-lg transition-shadow">
-          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-5">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B8CE9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-              <circle cx="12" cy="10" r="3" />
-            </svg>
-          </div>
-          <h3 class="text-lg font-bold text-brand-dark mb-2">Machine Learning</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">
-            Custom NLP and Computer Vision models designed for real-world reliability and scale.
-          </p>
-        </div>
-
-        <!-- Data Engineering -->
-        <div class="bg-white border border-gray-100 rounded-2xl p-8 hover:shadow-lg transition-shadow">
-          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-5">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B8CE9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
-              <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
-              <line x1="6" y1="6" x2="6.01" y2="6" />
-              <line x1="6" y1="18" x2="6.01" y2="18" />
-            </svg>
-          </div>
-          <h3 class="text-lg font-bold text-brand-dark mb-2">Data Engineering</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">
-            Robust ETL pipelines and data warehouses built on modern cloud architectures.
-          </p>
-        </div>
-
-        <!-- Predictive Analytics -->
-        <div class="bg-white border border-gray-100 rounded-2xl p-8 hover:shadow-lg transition-shadow">
-          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-5">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B8CE9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="18" y1="20" x2="18" y2="10" />
-              <line x1="12" y1="20" x2="12" y2="4" />
-              <line x1="6" y1="20" x2="6" y2="14" />
-            </svg>
-          </div>
-          <h3 class="text-lg font-bold text-brand-dark mb-2">Predictive Analytics</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">
-            Advanced statistical modeling to forecast trends and optimize business outcomes.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects / Portfolio Section -->
+  <!-- Projects Section -->
   <section id="projects" class="py-20 bg-gray-50/50">
     <div class="container mx-auto px-6">
-      <div class="flex items-end justify-between mb-12">
-        <div>
-          <p class="text-brand-blue text-xs font-semibold uppercase tracking-widest mb-3">Portfolio</p>
-          <h2 class="text-3xl md:text-4xl font-bold text-brand-dark">Featured Projects</h2>
-        </div>
-        <a href="#projects" class="hidden md:flex items-center gap-2 text-brand-blue text-sm font-semibold hover:underline">
-          View All Case Studies
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 12h14M12 5l7 7-7 7" />
-          </svg>
-        </a>
+      <div class="text-center mb-16">
+        <p class="text-brand-blue text-xs font-semibold uppercase tracking-widest mb-3">Our Projects</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4">What We've Built</h2>
+        <p class="text-gray-500 max-w-2xl mx-auto">
+          Tools we created to solve real problems in our own lives — and hopefully yours too.
+        </p>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-8 max-w-5xl">
-        <ProjectCard
-          client:load
-          title="Quantum Ledger Scalability"
-          description="Rebuilding the backend architecture for a global payments provider to handle 10x peak load."
-          tags={["Infrastructure", "FinTech"]}
-          imageBg="from-slate-100 to-blue-50"
-          iconType="pulse"
-        />
+      <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+        <!-- Birth Your Way -->
+        <div class="group rounded-2xl overflow-hidden bg-white border border-gray-100 hover:shadow-xl transition-all duration-300">
+          <div class="bg-gradient-to-br from-pink-50 to-rose-50 p-6 flex items-center justify-center relative overflow-hidden">
+            <img
+              src="/images/birth-your-way-screenshot.png"
+              alt="Birth Your Way screenshot"
+              class="rounded-lg shadow-md w-full h-auto max-h-64 object-cover"
+            />
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <img src="/images/birth-your-way-logo.png" alt="Birth Your Way logo" class="w-10 h-10 rounded-lg" />
+              <div>
+                <h3 class="text-xl font-bold text-brand-dark">Birth Your Way</h3>
+                <span class="text-xs font-semibold text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Health & Planning</span>
+              </div>
+            </div>
+            <p class="text-gray-500 text-sm leading-relaxed">
+              A personalised birth plan generator that helps expectant parents create detailed,
+              informed birth plans. Answer guided questions and receive a comprehensive plan ready
+              to share with your healthcare provider.
+            </p>
+          </div>
+        </div>
 
-        <ProjectCard
-          client:load
-          title="Neural Pathway Analysis"
-          description="Developing AI models to identify early-stage biomarkers in complex genomic datasets."
-          tags={["BioTech", "AI/ML"]}
-          imageBg="from-cyan-50 to-teal-50"
-          iconType="brain"
-        />
+        <!-- LifeVault -->
+        <div class="group rounded-2xl overflow-hidden bg-white border border-gray-100 hover:shadow-xl transition-all duration-300">
+          <div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 flex items-center justify-center relative overflow-hidden">
+            <img
+              src="/images/main-dashboard-screenshot.png"
+              alt="LifeVault dashboard screenshot"
+              class="rounded-lg shadow-md w-full h-auto max-h-64 object-cover"
+            />
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <img src="/images/life-vault-logo.png" alt="LifeVault logo" class="w-10 h-10 rounded-lg" />
+              <div>
+                <h3 class="text-xl font-bold text-brand-dark">LifeVault</h3>
+                <span class="text-xs font-semibold text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Productivity</span>
+              </div>
+            </div>
+            <p class="text-gray-500 text-sm leading-relaxed">
+              A personal file organiser that keeps your important documents, records, and files
+              neatly structured and easily accessible. Take control of your digital life with
+              a simple, intuitive interface.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA / Stats Section -->
+  <!-- About / CTA Section -->
   <section id="about" class="py-20 bg-gradient-to-br from-brand-dark to-brand-navy text-white">
     <div class="container mx-auto px-6">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to unlock your data's potential?</h2>
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Built by Engineers, for Everyone</h2>
         <p class="text-gray-300 max-w-xl mx-auto">
-          Join industry leaders who trust Sabr Labs for their most critical technology
-          and data science initiatives.
+          We're Ahmed and Ammaar — two engineers who believe the best software comes from
+          solving your own problems first.
         </p>
       </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto mb-12">
-        <div class="text-center">
-          <p class="text-4xl md:text-5xl font-extrabold text-brand-blue">50+</p>
-          <p class="text-gray-400 text-sm mt-2">Enterprise Clients</p>
+      <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto mb-12">
+        <div class="text-center bg-white/5 rounded-2xl p-8">
+          <p class="text-4xl md:text-5xl font-extrabold text-brand-blue mb-2">2</p>
+          <p class="text-gray-400 text-sm">Projects Live</p>
         </div>
-        <div class="text-center">
-          <p class="text-4xl md:text-5xl font-extrabold text-white">12</p>
-          <p class="text-gray-400 text-sm mt-2">Proprietary Models</p>
-        </div>
-        <div class="text-center">
-          <p class="text-4xl md:text-5xl font-extrabold text-white">24/7</p>
-          <p class="text-gray-400 text-sm mt-2">System Monitoring</p>
-        </div>
-        <div class="text-center">
-          <p class="text-4xl md:text-5xl font-extrabold text-white">100%</p>
-          <p class="text-gray-400 text-sm mt-2">Success Rate</p>
+        <div class="text-center bg-white/5 rounded-2xl p-8">
+          <p class="text-4xl md:text-5xl font-extrabold text-white mb-2">2</p>
+          <p class="text-gray-400 text-sm">Founders</p>
         </div>
       </div>
 
       <div class="text-center" id="contact">
         <a
-          href="mailto:contact@sabrlabs.com"
+          href="/founders"
           class="inline-block bg-transparent border-2 border-brand-blue text-brand-blue font-semibold px-8 py-3.5 rounded-full hover:bg-brand-blue hover:text-white transition-colors"
         >
-          Schedule a Consultation
+          Meet the Founders
         </a>
       </div>
     </div>

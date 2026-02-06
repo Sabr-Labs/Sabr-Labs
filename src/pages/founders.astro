@@ -1,0 +1,111 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+---
+
+<Layout title="Founders - Sabr Labs">
+  <Navbar client:load />
+
+  <!-- Founders Hero -->
+  <section class="bg-white pt-16 pb-8">
+    <div class="container mx-auto px-6 text-center">
+      <p class="text-brand-blue text-xs font-semibold uppercase tracking-widest mb-3">The Team</p>
+      <h1 class="text-4xl md:text-5xl font-extrabold text-brand-dark mb-4">Meet the Founders</h1>
+      <p class="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
+        We're two engineers who like to create software that eases our daily life.
+        Everything we build starts as a personal need — and grows into something we hope helps others too.
+      </p>
+    </div>
+  </section>
+
+  <!-- Founders Grid -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+
+        <!-- Ahmed -->
+        <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 text-center">
+          <img
+            src="/images/ahmed.jpeg"
+            alt="Ahmed"
+            class="w-28 h-28 mx-auto mb-6 rounded-full object-cover ring-4 ring-white shadow-lg"
+          />
+          <h2 class="text-2xl font-bold text-brand-dark mb-2">Ahmed</h2>
+          <p class="text-brand-blue font-semibold text-sm uppercase tracking-wider mb-4">Software Engineer</p>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Ahmed brings ideas to life through code. He focuses on building clean,
+            user-friendly applications that solve real problems. From frontend interfaces to
+            backend logic, he handles the full stack of engineering that powers Sabr Labs' products.
+          </p>
+          <div class="mt-6 flex items-center justify-center gap-2">
+            <span class="text-xs font-semibold text-gray-500 bg-white px-3 py-1 rounded-full">Full Stack</span>
+            <span class="text-xs font-semibold text-gray-500 bg-white px-3 py-1 rounded-full">Product</span>
+            <span class="text-xs font-semibold text-gray-500 bg-white px-3 py-1 rounded-full">UI/UX</span>
+          </div>
+        </div>
+
+        <!-- Ammaar -->
+        <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-8 text-center">
+          <img
+            src="/images/ammaar.jpeg"
+            alt="Ammaar"
+            class="w-28 h-28 mx-auto mb-6 rounded-full object-cover ring-4 ring-white shadow-lg"
+          />
+          <h2 class="text-2xl font-bold text-brand-dark mb-2">Ammaar</h2>
+          <p class="text-emerald-600 font-semibold text-sm uppercase tracking-wider mb-4">DevOps Engineer</p>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Ammaar keeps everything running smoothly. He architects the infrastructure,
+            automates deployments, and ensures Sabr Labs' products are reliable, secure,
+            and scalable. If it ships, it's because Ammaar made the pipeline work.
+          </p>
+          <div class="mt-6 flex items-center justify-center gap-2">
+            <span class="text-xs font-semibold text-gray-500 bg-white px-3 py-1 rounded-full">Infrastructure</span>
+            <span class="text-xs font-semibold text-gray-500 bg-white px-3 py-1 rounded-full">CI/CD</span>
+            <span class="text-xs font-semibold text-gray-500 bg-white px-3 py-1 rounded-full">Cloud</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Story -->
+  <section class="py-16 bg-gray-50/50">
+    <div class="container mx-auto px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <p class="text-brand-blue text-xs font-semibold uppercase tracking-widest mb-3">Our Story</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-6">Why We Build</h2>
+        <p class="text-gray-500 leading-relaxed mb-6">
+          Sabr Labs started from a simple idea: if we need it, others probably do too.
+          As engineers, we kept running into everyday friction — organising files, planning for
+          major life events — and decided to build the tools we wished existed.
+        </p>
+        <p class="text-gray-500 leading-relaxed">
+          Our projects are personal before they're products. Birth Your Way was born from the
+          experience of navigating birth planning, and LifeVault came from wanting a better way
+          to keep important documents organised. We build what we use, and we share it because
+          we think it can help.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects CTA -->
+  <section class="py-16 bg-gradient-to-br from-brand-dark to-brand-navy text-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">See What We've Built</h2>
+      <p class="text-gray-300 max-w-xl mx-auto mb-8">
+        Check out Birth Your Way and LifeVault — tools built from personal experience to help with yours.
+      </p>
+      <a
+        href="/#projects"
+        class="inline-block bg-brand-blue text-white font-semibold px-8 py-3.5 rounded-full hover:bg-blue-600 transition-colors"
+      >
+        View Our Projects
+      </a>
+    </div>
+  </section>
+
+  <Footer client:load />
+</Layout>
