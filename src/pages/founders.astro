@@ -7,19 +7,20 @@ import Footer from '../components/Footer';
 
 <Layout title="Founders - Sabr Labs">
   <Navbar client:load />
-  
-  <section class="py-20 bg-gradient-to-br from-deep-navy via-mid-blue to-primary-cyan">
-    <div class="container mx-auto px-4 text-center text-white">
-      <h1 class="text-5xl font-bold mb-6 drop-shadow-lg">Meet Our Founders</h1>
-      <p class="text-xl max-w-2xl mx-auto leading-relaxed">
-        The passionate minds behind Sabr Labs, dedicated to building software that makes everyday life better.
+
+  <section class="py-20 bg-gradient-to-br from-brand-dark to-brand-navy">
+    <div class="container mx-auto px-6 text-center text-white">
+      <p class="text-brand-blue text-xs font-semibold uppercase tracking-widest mb-3">Our Team</p>
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">Meet Our Founders</h1>
+      <p class="text-gray-300 max-w-2xl mx-auto leading-relaxed">
+        The passionate minds behind Sabr Labs, dedicated to building technology that drives enterprise innovation.
       </p>
     </div>
   </section>
 
-  <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
-    <div class="container mx-auto px-4">
-      <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         <FounderCard
           client:load
           name="Ahmed"
@@ -27,7 +28,7 @@ import Footer from '../components/Footer';
           initials="A"
           bio="Ahmed is passionate about creating technology solutions that address real-world problems. With a focus on innovation and user experience, he drives the vision and strategy at Sabr Labs."
         />
-        
+
         <FounderCard
           client:load
           name="Ammaar"
@@ -39,22 +40,22 @@ import Footer from '../components/Footer';
     </div>
   </section>
 
-  <section class="py-20 bg-gradient-to-br from-deep-navy to-mid-blue text-white">
-    <div class="container mx-auto px-4">
-      <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-4xl font-bold mb-8">Our Mission</h2>
-        <p class="text-xl leading-relaxed mb-6">
-          Together, Ahmed and Ammaar founded Sabr Labs with a simple mission: to create software 
-          that solves personal issues and builds the apps we all want in our daily lives.
+  <section class="py-20 bg-gradient-to-br from-brand-dark to-brand-navy text-white">
+    <div class="container mx-auto px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8">Our Mission</h2>
+        <p class="text-lg text-gray-300 leading-relaxed mb-6">
+          Together, Ahmed and Ammaar founded Sabr Labs with a simple mission: to accelerate
+          innovation through advanced data science and custom technology solutions for enterprises.
         </p>
-        <p class="text-lg leading-relaxed">
-          We believe that great software should be accessible, intuitive, and genuinely useful. 
+        <p class="text-gray-400 leading-relaxed">
+          We believe that great technology should be accessible, intuitive, and genuinely impactful.
           Every project we undertake is driven by this philosophy.
         </p>
         <div class="mt-10">
-          <a 
-            href="/" 
-            class="btn btn-primary btn-lg text-deep-navy hover:scale-105 transition-transform"
+          <a
+            href="/"
+            class="inline-block bg-brand-blue text-white font-semibold px-8 py-3.5 rounded-lg hover:bg-blue-600 transition-colors"
           >
             View Our Projects
           </a>

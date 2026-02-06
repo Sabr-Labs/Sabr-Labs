@@ -9,19 +9,19 @@ interface FounderCardProps {
 
 const FounderCard: React.FC<FounderCardProps> = ({ name, role, bio, initials }) => {
   return (
-    <div className="card bg-base-100 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-[1.02]">
-      <div className="card-body items-center text-center">
-        <div className="avatar placeholder mb-6">
-          <div 
-            className="bg-gradient-to-br from-primary-cyan to-mid-blue text-white rounded-full w-32 h-32"
+    <div className="bg-white border border-gray-100 rounded-2xl p-8 hover:shadow-lg transition-all duration-300">
+      <div className="flex flex-col items-center text-center">
+        <div className="mb-6">
+          <div
+            className="bg-gradient-to-br from-brand-blue to-brand-accent text-white rounded-full w-28 h-28 flex items-center justify-center"
             aria-label={`${name}'s profile picture`}
           >
-            <span className="text-4xl font-bold">{initials}</span>
+            <span className="text-3xl font-bold">{initials}</span>
           </div>
         </div>
-        <h3 className="card-title text-3xl font-bold text-deep-navy">{name}</h3>
-        <p className="text-lg text-primary-cyan font-semibold mb-4">{role}</p>
-        <p className="text-gray-700 leading-relaxed max-w-md">{bio}</p>
+        <h3 className="text-2xl font-bold text-brand-dark">{name}</h3>
+        <p className="text-brand-blue font-semibold mb-4">{role}</p>
+        <p className="text-gray-500 leading-relaxed max-w-md text-sm">{bio}</p>
       </div>
     </div>
   );
