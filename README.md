@@ -10,12 +10,6 @@ A modern portfolio website built with Astro, React (TypeScript), Tailwind CSS, a
 - **DaisyUI** - Beautiful UI components
 - **Custom Brand Colors** - Professional healthcare-focused color palette
 
-## 🎨 Color Palette
-
-- **Primary Cyan** (#00D2D3) - Innovation, clarity, and energy
-- **Mid-Tone Blue** (#0078D4) - Trust, stability, and intelligence
-- **Deep Navy** (#003B95) - Professionalism, depth, and authority
-
 ## 📦 Projects Showcased
 
 1. **Birth Your Way** - Empowering platform for expectant mothers
