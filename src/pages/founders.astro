@@ -1,0 +1,67 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import FounderCard from '../components/FounderCard';
+import Footer from '../components/Footer';
+---
+
+<Layout title="Founders - Sabr Labs">
+  <Navbar client:load />
+  
+  <section class="py-20 bg-gradient-to-br from-deep-navy via-mid-blue to-primary-cyan">
+    <div class="container mx-auto px-4 text-center text-white">
+      <h1 class="text-5xl font-bold mb-6 drop-shadow-lg">Meet Our Founders</h1>
+      <p class="text-xl max-w-2xl mx-auto leading-relaxed">
+        The passionate minds behind Sabr Labs, dedicated to building software that makes everyday life better.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+        <FounderCard
+          client:load
+          name="Ahmed"
+          role="Co-Founder"
+          initials="A"
+          bio="Ahmed is passionate about creating technology solutions that address real-world problems. With a focus on innovation and user experience, he drives the vision and strategy at Sabr Labs."
+        />
+        
+        <FounderCard
+          client:load
+          name="Ammaar"
+          role="Co-Founder"
+          initials="A"
+          bio="Ammaar brings technical expertise and a keen eye for detail to every project. He is dedicated to building robust, scalable software that delivers meaningful value to users."
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-gradient-to-br from-deep-navy to-mid-blue text-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-8">Our Mission</h2>
+        <p class="text-xl leading-relaxed mb-6">
+          Together, Ahmed and Ammaar founded Sabr Labs with a simple mission: to create software 
+          that solves personal issues and builds the apps we all want in our daily lives.
+        </p>
+        <p class="text-lg leading-relaxed">
+          We believe that great software should be accessible, intuitive, and genuinely useful. 
+          Every project we undertake is driven by this philosophy.
+        </p>
+        <div class="mt-10">
+          <a 
+            href="/" 
+            class="btn btn-primary btn-lg text-deep-navy hover:scale-105 transition-transform"
+          >
+            View Our Projects
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer client:load />
+</Layout>
