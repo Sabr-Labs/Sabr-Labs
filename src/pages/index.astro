@@ -1,0 +1,89 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+import ProjectCard from '../components/ProjectCard';
+import Footer from '../components/Footer';
+---
+
+<Layout title="Sabr Labs - Innovating Healthcare Solutions">
+  <Navbar client:load />
+  <Hero client:load />
+  
+  <section id="projects" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-5xl font-bold text-center mb-4 text-deep-navy">Our Projects</h2>
+      <p class="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">
+        Transforming healthcare through innovative technology solutions
+      </p>
+      
+      <div class="grid md:grid-cols-2 gap-10 max-w-7xl mx-auto">
+        <ProjectCard
+          client:load
+          title="Birth Your Way"
+          description="An empowering platform that helps expectant mothers make informed decisions about their birthing experience. Our comprehensive tool provides personalized guidance, educational resources, and decision-making support throughout pregnancy and childbirth."
+          features={[
+            "Personalized birth plan creation and management",
+            "Evidence-based educational resources and videos",
+            "Interactive decision-making tools for birth preferences",
+            "Connect with healthcare providers and doulas",
+            "Track pregnancy milestones and appointments",
+            "Community support and shared experiences"
+          ]}
+          gradient="border-t-4 border-primary-cyan"
+        />
+        
+        <ProjectCard
+          client:load
+          title="Life Vault"
+          description="A secure, comprehensive health records management system that puts you in control of your medical information. Life Vault enables seamless sharing of health data with providers while maintaining privacy and security at the highest standards."
+          features={[
+            "Secure cloud-based health record storage",
+            "Easy sharing with healthcare providers",
+            "Medication tracking and reminders",
+            "Lab results and test history management",
+            "Family health history documentation",
+            "HIPAA-compliant encryption and security"
+          ]}
+          gradient="border-t-4 border-mid-blue"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-20 bg-gradient-to-br from-deep-navy to-mid-blue text-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-8">About Sabr Labs</h2>
+        <p class="text-xl leading-relaxed mb-6">
+          At Sabr Labs, we believe in the power of technology to transform healthcare. 
+          Our mission is to create innovative solutions that empower individuals and 
+          healthcare professionals to make better decisions with clarity and confidence.
+        </p>
+        <p class="text-lg leading-relaxed">
+          With a focus on user-centered design and cutting-edge technology, we're building 
+          the future of healthcare—one innovation at a time.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-8 text-deep-navy">Get In Touch</h2>
+        <p class="text-xl text-gray-600 mb-8">
+          Interested in learning more about our projects or partnering with us?
+        </p>
+        <a 
+          href="mailto:contact@sabrlabs.com" 
+          class="btn btn-primary btn-lg text-white hover:bg-mid-blue transition-colors"
+        >
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer client:load />
+</Layout>
