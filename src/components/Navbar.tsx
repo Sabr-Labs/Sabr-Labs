@@ -22,24 +22,24 @@ const Navbar: React.FC = () => {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#expertise" className="text-sm font-medium text-gray-600 hover:text-brand-dark transition-colors">
-              Expertise
-            </a>
-            <a href="#projects" className="text-sm font-medium text-gray-600 hover:text-brand-dark transition-colors">
+            <a href="/#projects" className="text-sm font-medium text-gray-600 hover:text-brand-dark transition-colors">
               Projects
             </a>
-            <a href="#about" className="text-sm font-medium text-gray-600 hover:text-brand-dark transition-colors">
+            <a href="/#about" className="text-sm font-medium text-gray-600 hover:text-brand-dark transition-colors">
               About
+            </a>
+            <a href="/founders" className="text-sm font-medium text-gray-600 hover:text-brand-dark transition-colors">
+              Founders
             </a>
           </div>
 
           {/* CTA + Dark mode toggle */}
           <div className="hidden md:flex items-center gap-4">
             <a
-              href="#contact"
+              href="/founders"
               className="bg-brand-blue text-white text-sm font-medium px-5 py-2.5 rounded-full hover:bg-blue-600 transition-colors"
             >
-              Get Started
+              Meet the Team
             </a>
             <button
               className="w-9 h-9 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-colors"
@@ -72,14 +72,14 @@ const Navbar: React.FC = () => {
         {/* Mobile menu */}
         {mobileOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-gray-100 pt-4 flex flex-col gap-3">
-            <a href="#expertise" className="text-sm font-medium text-gray-600 hover:text-brand-dark">Expertise</a>
-            <a href="#projects" className="text-sm font-medium text-gray-600 hover:text-brand-dark">Projects</a>
-            <a href="#about" className="text-sm font-medium text-gray-600 hover:text-brand-dark">About</a>
+            <a href="/#projects" className="text-sm font-medium text-gray-600 hover:text-brand-dark">Projects</a>
+            <a href="/#about" className="text-sm font-medium text-gray-600 hover:text-brand-dark">About</a>
+            <a href="/founders" className="text-sm font-medium text-gray-600 hover:text-brand-dark">Founders</a>
             <a
-              href="#contact"
+              href="/founders"
               className="bg-brand-blue text-white text-sm font-medium px-5 py-2.5 rounded-full text-center hover:bg-blue-600 transition-colors mt-2"
             >
-              Get Started
+              Meet the Team
             </a>
           </div>
         )}
