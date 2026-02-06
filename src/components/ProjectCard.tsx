@@ -5,11 +5,21 @@ interface ProjectCardProps {
   description: string;
   features: string[];
   gradient: string;
+  imageSrc?: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, features, gradient }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, features, gradient, imageSrc }) => {
   return (
     <div className={`card bg-base-100 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-[1.02] ${gradient}`}>
+      {imageSrc && (
+        <figure className="px-6 pt-6">
+          <img 
+            src={imageSrc} 
+            alt={`${title} screenshot`} 
+            className="rounded-xl w-full h-48 object-cover shadow-md"
+          />
+        </figure>
+      )}
       <div className="card-body">
         <h3 className="card-title text-3xl font-bold mb-4 text-deep-navy">{title}</h3>
         <p className="text-lg mb-6 text-gray-700 leading-relaxed">{description}</p>

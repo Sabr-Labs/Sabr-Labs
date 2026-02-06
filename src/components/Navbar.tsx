@@ -17,6 +17,11 @@ const Navbar: React.FC = () => {
               </a>
             </li>
             <li>
+              <a href="/founders" className="hover:text-primary-cyan">
+                Founders
+              </a>
+            </li>
+            <li>
               <a href="#projects" className="hover:text-primary-cyan">
                 Projects
               </a>

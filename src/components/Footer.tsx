@@ -10,6 +10,9 @@ const Footer: React.FC = () => {
           <a href="#about" className="link link-hover hover:text-primary-cyan">
             About
           </a>
+          <a href="/founders" className="link link-hover hover:text-primary-cyan">
+            Founders
+          </a>
           <a href="#projects" className="link link-hover hover:text-primary-cyan">
             Projects
           </a>
@@ -70,7 +73,7 @@ const Footer: React.FC = () => {
           <p className="font-light">
             Copyright © {currentYear} - <span className="text-primary-cyan font-semibold">Sabr Labs</span>
           </p>
-          <p className="text-sm mt-2">Innovation, Clarity, and Energy in Healthcare</p>
+          <p className="text-sm mt-2">Building Software for Everyday Life</p>
         </div>
       </div>
     </footer>
