@@ -4,9 +4,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        'primary-cyan': '#00D2D3',
-        'mid-blue': '#0078D4',
-        'deep-navy': '#003B95',
+        'brand-blue': '#0B8CE9',
+        'brand-dark': '#0A1628',
+        'brand-navy': '#0F2137',
+        'brand-light': '#F7FAFC',
+        'brand-cyan': '#0B8CE9',
+        'brand-accent': '#06B6D4',
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
       },
     },
   },
@@ -15,12 +21,14 @@ export default {
     themes: [
       {
         sabrlabs: {
-          'primary': '#00D2D3',
-          'secondary': '#0078D4',
-          'accent': '#003B95',
-          'neutral': '#1F2937',
+          'primary': '#0B8CE9',
+          'secondary': '#06B6D4',
+          'accent': '#0F2137',
+          'neutral': '#374151',
           'base-100': '#FFFFFF',
-          'info': '#0078D4',
+          'base-200': '#F7FAFC',
+          'base-300': '#E2E8F0',
+          'info': '#0B8CE9',
           'success': '#10B981',
           'warning': '#F59E0B',
           'error': '#EF4444',
