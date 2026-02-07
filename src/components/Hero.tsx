@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Hero: React.FC = () => {
+interface HeroProps {
+  base?: string;
+}
+
+const Hero: React.FC<HeroProps> = ({ base = '' }) => {
   return (
     <section className="bg-white overflow-hidden">
       <div className="container mx-auto px-6 py-16 lg:py-24">
@@ -36,7 +40,7 @@ const Hero: React.FC = () => {
                 See Our Projects
               </a>
               <a
-                href="/founders"
+                href={`${base}founders`}
                 className="flex items-center gap-2 text-brand-dark font-semibold px-7 py-3.5 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-colors"
               >
                 Meet the Founders
@@ -51,7 +55,7 @@ const Hero: React.FC = () => {
           <div className="relative flex items-center justify-center">
             <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 shadow-lg w-full flex items-center justify-center">
               <img
-                src="/images/SabrLabs-logo.png"
+                src={`${base}images/SabrLabs-logo.png`}
                 alt="Sabr Labs"
                 className="max-w-xs md:max-w-sm w-full h-auto"
               />

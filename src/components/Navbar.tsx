@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  base?: string;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ base = '' }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
@@ -8,7 +12,7 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2">
+          <a href={base || '/'} className="flex items-center gap-2">
             <div className="w-8 h-8 bg-gradient-to-br from-brand-blue to-emerald-400 rounded-lg flex items-center justify-center">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <rect x="2" y="2" width="5" height="5" rx="1" fill="white" opacity="0.9" />
@@ -22,13 +26,13 @@ const Navbar: React.FC = () => {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="/#projects" className="text-sm font-medium text-gray-600 hover:text-brand-dark transition-colors">
+            <a href={`${base}#projects`} className="text-sm font-medium text-gray-600 hover:text-brand-dark transition-colors">
               Projects
             </a>
-            <a href="/#about" className="text-sm font-medium text-gray-600 hover:text-brand-dark transition-colors">
+            <a href={`${base}#about`} className="text-sm font-medium text-gray-600 hover:text-brand-dark transition-colors">
               About
             </a>
-            <a href="/founders" className="text-sm font-medium text-gray-600 hover:text-brand-dark transition-colors">
+            <a href={`${base}founders`} className="text-sm font-medium text-gray-600 hover:text-brand-dark transition-colors">
               Founders
             </a>
           </div>
@@ -36,7 +40,7 @@ const Navbar: React.FC = () => {
           {/* CTA + Dark mode toggle */}
           <div className="hidden md:flex items-center gap-4">
             <a
-              href="/founders"
+              href={`${base}founders`}
               className="bg-brand-blue text-white text-sm font-medium px-5 py-2.5 rounded-full hover:bg-blue-600 transition-colors"
             >
               Meet the Team
@@ -72,11 +76,11 @@ const Navbar: React.FC = () => {
         {/* Mobile menu */}
         {mobileOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-gray-100 pt-4 flex flex-col gap-3">
-            <a href="/#projects" className="text-sm font-medium text-gray-600 hover:text-brand-dark">Projects</a>
-            <a href="/#about" className="text-sm font-medium text-gray-600 hover:text-brand-dark">About</a>
-            <a href="/founders" className="text-sm font-medium text-gray-600 hover:text-brand-dark">Founders</a>
+            <a href={`${base}#projects`} className="text-sm font-medium text-gray-600 hover:text-brand-dark">Projects</a>
+            <a href={`${base}#about`} className="text-sm font-medium text-gray-600 hover:text-brand-dark">About</a>
+            <a href={`${base}founders`} className="text-sm font-medium text-gray-600 hover:text-brand-dark">Founders</a>
             <a
-              href="/founders"
+              href={`${base}founders`}
               className="bg-brand-blue text-white text-sm font-medium px-5 py-2.5 rounded-full text-center hover:bg-blue-600 transition-colors mt-2"
             >
               Meet the Team
