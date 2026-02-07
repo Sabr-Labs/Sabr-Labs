@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Footer: React.FC = () => {
+interface FooterProps {
+  base?: string;
+}
+
+const Footer: React.FC<FooterProps> = ({ base = '' }) => {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -43,13 +47,13 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4">Projects</h4>
             <ul className="space-y-3">
-              <li><a href="/#projects" className="text-gray-300 text-sm hover:text-white transition-colors">Birth Your Way</a></li>
-              <li><a href="/#projects" className="text-gray-300 text-sm hover:text-white transition-colors">LifeVault</a></li>
+              <li><a href={`${base}#projects`} className="text-gray-300 text-sm hover:text-white transition-colors">Birth Your Way</a></li>
+              <li><a href={`${base}#projects`} className="text-gray-300 text-sm hover:text-white transition-colors">LifeVault</a></li>
             </ul>
             <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4 mt-8">Company</h4>
             <ul className="space-y-3">
-              <li><a href="/founders" className="text-gray-300 text-sm hover:text-white transition-colors">Founders</a></li>
-              <li><a href="/#about" className="text-gray-300 text-sm hover:text-white transition-colors">About</a></li>
+              <li><a href={`${base}founders`} className="text-gray-300 text-sm hover:text-white transition-colors">Founders</a></li>
+              <li><a href={`${base}#about`} className="text-gray-300 text-sm hover:text-white transition-colors">About</a></li>
             </ul>
           </div>
 

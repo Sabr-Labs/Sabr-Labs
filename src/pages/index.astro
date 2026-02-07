@@ -3,11 +3,13 @@ import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Footer from '../components/Footer';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout title="Sabr Labs - Software for Everyday Life">
-  <Navbar client:load />
-  <Hero client:load />
+  <Navbar client:load base={base} />
+  <Hero client:load base={base} />
 
   <!-- Projects Section -->
   <section id="projects" class="py-20 bg-gray-50/50">
@@ -25,14 +27,14 @@ import Footer from '../components/Footer';
         <div class="group rounded-2xl overflow-hidden bg-white border border-gray-100 hover:shadow-xl transition-all duration-300">
           <div class="bg-gradient-to-br from-pink-50 to-rose-50 p-6 flex items-center justify-center relative overflow-hidden">
             <img
-              src="/images/birth-your-way-screenshot.png"
+              src={`${base}images/birth-your-way-screenshot.png`}
               alt="Birth Your Way screenshot"
               class="rounded-lg shadow-md w-full h-auto max-h-64 object-cover"
             />
           </div>
           <div class="p-6">
             <div class="flex items-center gap-3 mb-4">
-              <img src="/images/birth-your-way-logo.png" alt="Birth Your Way logo" class="w-10 h-10 rounded-lg" />
+              <img src={`${base}images/birth-your-way-logo.png`} alt="Birth Your Way logo" class="w-10 h-10 rounded-lg" />
               <div>
                 <h3 class="text-xl font-bold text-brand-dark">Birth Your Way</h3>
                 <span class="text-xs font-semibold text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Health & Planning</span>
@@ -50,14 +52,14 @@ import Footer from '../components/Footer';
         <div class="group rounded-2xl overflow-hidden bg-white border border-gray-100 hover:shadow-xl transition-all duration-300">
           <div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 flex items-center justify-center relative overflow-hidden">
             <img
-              src="/images/main-dashboard-screenshot.png"
+              src={`${base}images/main-dashboard-screenshot.png`}
               alt="LifeVault dashboard screenshot"
               class="rounded-lg shadow-md w-full h-auto max-h-64 object-cover"
             />
           </div>
           <div class="p-6">
             <div class="flex items-center gap-3 mb-4">
-              <img src="/images/life-vault-logo.png" alt="LifeVault logo" class="w-10 h-10 rounded-lg" />
+              <img src={`${base}images/life-vault-logo.png`} alt="LifeVault logo" class="w-10 h-10 rounded-lg" />
               <div>
                 <h3 class="text-xl font-bold text-brand-dark">LifeVault</h3>
                 <span class="text-xs font-semibold text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Productivity</span>
@@ -98,7 +100,7 @@ import Footer from '../components/Footer';
 
       <div class="text-center" id="contact">
         <a
-          href="/founders"
+          href={`${base}founders`}
           class="inline-block bg-transparent border-2 border-brand-blue text-brand-blue font-semibold px-8 py-3.5 rounded-full hover:bg-brand-blue hover:text-white transition-colors"
         >
           Meet the Founders
@@ -107,5 +109,5 @@ import Footer from '../components/Footer';
     </div>
   </section>
 
-  <Footer client:load />
+  <Footer client:load base={base} />
 </Layout>
