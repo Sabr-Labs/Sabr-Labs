@@ -24,7 +24,8 @@ const base = import.meta.env.BASE_URL;
 
       <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
         <!-- Birth Your Way -->
-        <div class="group rounded-2xl overflow-hidden bg-white border border-gray-100 hover:shadow-xl transition-all duration-300">
+        <a href="https://www.birthplan.co.uk/" target="_blank" rel="noopener noreferrer" class="block" aria-label="Visit Birth Your Way project website">
+        <div class="group rounded-2xl overflow-hidden bg-white border border-gray-100 hover:shadow-xl transition-all duration-300 cursor-pointer">
           <div class="bg-gradient-to-br from-pink-50 to-rose-50 p-6 flex items-center justify-center relative overflow-hidden">
             <img
               src={`${base}/images/birth-your-way-screenshot.png`}
@@ -47,9 +48,11 @@ const base = import.meta.env.BASE_URL;
             </p>
           </div>
         </div>
+        </a>
 
         <!-- LifeVault -->
-        <div class="group rounded-2xl overflow-hidden bg-white border border-gray-100 hover:shadow-xl transition-all duration-300">
+        <a href="https://lifevault.sabrlabs.co.uk/" target="_blank" rel="noopener noreferrer" class="block" aria-label="Visit LifeVault project website">
+        <div class="group rounded-2xl overflow-hidden bg-white border border-gray-100 hover:shadow-xl transition-all duration-300 cursor-pointer">
           <div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 flex items-center justify-center relative overflow-hidden">
             <img
               src={`${base}/images/main-dashboard-screenshot.png`}
@@ -72,6 +75,7 @@ const base = import.meta.env.BASE_URL;
             </p>
           </div>
         </div>
+        </a>
       </div>
     </div>
   </section>
