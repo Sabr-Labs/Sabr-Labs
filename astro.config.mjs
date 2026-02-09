@@ -1,10 +1,10 @@
-import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
-import react from '@astrojs/react';
+import { defineConfig } from "astro/config";
+import tailwind from "@astrojs/tailwind";
+import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://www.sabrlabs.co.uk',
-  base: '/',
+  site: "https://sabrlabs.co.uk",
+  base: "/",
   integrations: [tailwind(), react()],
 });
