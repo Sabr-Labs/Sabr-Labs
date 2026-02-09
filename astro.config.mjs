@@ -4,7 +4,7 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://sabr-labs.github.io',
-  base: '/Sabr-Labs',
+  site: 'https://www.sabrlabs.co.uk',
+  base: '/',
   integrations: [tailwind(), react()],
 });
