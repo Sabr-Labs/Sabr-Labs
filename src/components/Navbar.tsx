@@ -26,13 +26,13 @@ const Navbar: React.FC<NavbarProps> = ({ base = '' }) => {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
-            <a href={`${base}/#projects`} className="text-sm font-medium text-gray-600 hover:text-brand-dark transition-colors">
+            <a href={`${base}#projects`} className="text-sm font-medium text-gray-600 hover:text-brand-dark transition-colors">
               Projects
             </a>
-            <a href={`${base}/#about`} className="text-sm font-medium text-gray-600 hover:text-brand-dark transition-colors">
+            <a href={`${base}#about`} className="text-sm font-medium text-gray-600 hover:text-brand-dark transition-colors">
               About
             </a>
-            <a href={`${base}/founders`} className="text-sm font-medium text-gray-600 hover:text-brand-dark transition-colors">
+            <a href={`${base}founders`} className="text-sm font-medium text-gray-600 hover:text-brand-dark transition-colors">
               Founders
             </a>
           </div>
@@ -40,7 +40,7 @@ const Navbar: React.FC<NavbarProps> = ({ base = '' }) => {
           {/* CTA + Dark mode toggle */}
           <div className="hidden md:flex items-center gap-4">
             <a
-              href={`${base}/founders`}
+              href={`${base}founders`}
               className="bg-brand-blue text-white text-sm font-medium px-5 py-2.5 rounded-full hover:bg-blue-600 transition-colors"
             >
               Meet the Team
@@ -76,11 +76,11 @@ const Navbar: React.FC<NavbarProps> = ({ base = '' }) => {
         {/* Mobile menu */}
         {mobileOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-gray-100 pt-4 flex flex-col gap-3">
-            <a href={`${base}/#projects`} className="text-sm font-medium text-gray-600 hover:text-brand-dark">Projects</a>
-            <a href={`${base}/#about`} className="text-sm font-medium text-gray-600 hover:text-brand-dark">About</a>
-            <a href={`${base}/founders`} className="text-sm font-medium text-gray-600 hover:text-brand-dark">Founders</a>
+            <a href={`${base}#projects`} className="text-sm font-medium text-gray-600 hover:text-brand-dark">Projects</a>
+            <a href={`${base}#about`} className="text-sm font-medium text-gray-600 hover:text-brand-dark">About</a>
+            <a href={`${base}founders`} className="text-sm font-medium text-gray-600 hover:text-brand-dark">Founders</a>
             <a
-              href={`${base}/founders`}
+              href={`${base}founders`}
               className="bg-brand-blue text-white text-sm font-medium px-5 py-2.5 rounded-full text-center hover:bg-blue-600 transition-colors mt-2"
             >
               Meet the Team
