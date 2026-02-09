@@ -26,9 +26,9 @@ const icons: Record<string, React.ReactNode> = {
   ),
 };
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tags, imageBg = 'from-blue-50 to-cyan-50', iconType = 'cloud' }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tags, imageBg = 'from-brand-blue/10 to-brand-accent/10', iconType = 'cloud' }) => {
   return (
-    <div className="group rounded-2xl overflow-hidden bg-white border border-gray-100 hover:shadow-xl transition-all duration-300">
+    <div className="group rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 hover:shadow-xl transition-all duration-300">
       {/* Image area */}
       <div className={`bg-gradient-to-br ${imageBg} h-56 flex items-center justify-center relative overflow-hidden`}>
         <div className="text-brand-blue opacity-30 group-hover:opacity-50 transition-opacity">
@@ -42,14 +42,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tags, ima
           {tags.map((tag, i) => (
             <span
               key={i}
-              className="text-xs font-semibold text-gray-500 bg-gray-100 px-3 py-1 rounded-full"
+              className="text-xs font-semibold text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full"
             >
               {tag}
             </span>
           ))}
         </div>
-        <h3 className="text-xl font-bold text-brand-dark mb-2">{title}</h3>
-        <p className="text-gray-500 text-sm leading-relaxed">{description}</p>
+        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{title}</h3>
+        <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">{description}</p>
       </div>
     </div>
   );

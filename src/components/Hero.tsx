@@ -6,19 +6,19 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ base = '' }) => {
   return (
-    <section className="bg-white overflow-hidden">
+    <section className="bg-white dark:bg-gray-900 overflow-hidden">
       <div className="container mx-auto px-6 py-16 lg:py-24">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
           <div>
-            <div className="inline-flex items-center gap-2 bg-blue-50 text-brand-blue text-xs font-semibold px-4 py-2 rounded-full mb-6 uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 bg-brand-blue/10 dark:bg-brand-blue/20 text-brand-blue text-xs font-semibold px-4 py-2 rounded-full mb-6 uppercase tracking-wider">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
               </svg>
               Software for Everyday Life
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold leading-tight text-brand-dark mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold leading-tight text-gray-900 dark:text-white mb-6">
               Building Tools{' '}
               <br className="hidden sm:block" />
               That Simplify{' '}
@@ -26,7 +26,7 @@ const Hero: React.FC<HeroProps> = ({ base = '' }) => {
               <span className="text-brand-blue">Daily Life</span>
             </h1>
 
-            <p className="text-lg text-gray-500 mb-8 max-w-lg leading-relaxed">
+            <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-lg leading-relaxed">
               Sabr Labs is two engineers who love creating software that eases
               everyday life. From personal organisation to planning life's biggest
               moments, we build tools born from our own experiences.
@@ -41,7 +41,7 @@ const Hero: React.FC<HeroProps> = ({ base = '' }) => {
               </a>
               <a
                 href={`${base}founders`}
-                className="flex items-center gap-2 text-brand-dark font-semibold px-7 py-3.5 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-colors"
+                className="flex items-center gap-2 text-gray-900 dark:text-white font-semibold px-7 py-3.5 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
               >
                 Meet the Founders
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -53,7 +53,7 @@ const Hero: React.FC<HeroProps> = ({ base = '' }) => {
 
           {/* Right visual - Sabr Labs logo */}
           <div className="relative flex items-center justify-center">
-            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 shadow-lg w-full flex items-center justify-center">
+            <div className="bg-gradient-to-br from-brand-blue/10 to-brand-accent/10 dark:from-brand-blue/20 dark:to-brand-accent/20 rounded-2xl p-8 shadow-lg w-full flex items-center justify-center">
               <img
                 src={`${base}images/SabrLabs-logo.png`}
                 alt="Sabr Labs"
