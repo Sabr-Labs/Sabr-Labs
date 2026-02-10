@@ -68,6 +68,7 @@ npm run preview
 ## 🌐 Deployment
 
 The site can be deployed to any static hosting service:
+
 - Vercel
 - Netlify
 - GitHub Pages

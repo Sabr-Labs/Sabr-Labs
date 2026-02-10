@@ -65,16 +65,34 @@ If something similar already exists, extend it and document why a new component 
 - Avoid `any`; use inferred types or explicit types for public APIs.
 - Add comments only for non-obvious decisions.
 
-## 7. Scripts (Run When Requested)
+## 7. Scripts (Reference)
 
 - `npm run build` (includes `astro check`)
 - `npm run dev`
 - `npm run preview`
+- `npm run typecheck`
+- `npm run lint`
+- `npm run lint:fix`
+- `npm run format`
+- `npm run sort:package`
 
-## 8. Testing
+## 8. Mandatory Checks
+
+Agents MUST run these checks after code changes and before considering work complete:
+
+- `npm run typecheck`
+- `npm run lint:fix`
+- `npm run format`
+- `npm run sort:package`
+- `npm run test --if-present`
+
+Agents MUST ensure the working tree is clean after checks (`git diff --quiet`).
+Agents MUST use scripts that exist in `package.json` and MUST NOT invent ad-hoc verification commands.
+
+## 9. Testing
 
 This repo does not currently define tests. Only add tests if explicitly requested.
 
-## 9. Safety
+## 10. Safety
 
 Do not introduce new dependencies without explicit user approval.
