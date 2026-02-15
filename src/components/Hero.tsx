@@ -6,8 +6,11 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ base = "" }) => {
   return (
-    <section className="bg-white dark:bg-gray-900 overflow-hidden">
-      <div className="container mx-auto px-6 py-16 lg:py-24">
+    <section className="relative bg-gradient-to-b from-gray-50 via-white to-white dark:from-gray-800 dark:via-gray-900 dark:to-gray-900 overflow-hidden">
+      {/* Subtle radial gradient for depth */}
+      <div className="absolute inset-0 bg-gradient-radial from-brand-accent/5 via-transparent to-transparent dark:from-brand-accent/10 dark:via-transparent dark:to-transparent opacity-40" />
+
+      <div className="container relative mx-auto px-6 py-16 lg:py-24">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
           <div>
@@ -65,11 +68,15 @@ const Hero: React.FC<HeroProps> = ({ base = "" }) => {
 
           {/* Right visual - Sabr Labs logo */}
           <div className="relative flex items-center justify-center">
-            <div className="bg-gradient-to-br from-brand-blue/10 to-brand-accent/10 dark:from-brand-blue/20 dark:to-brand-accent/20 rounded-2xl p-8 shadow-lg w-full flex items-center justify-center">
+            {/* Directional glow with hue variation */}
+            <div className="absolute inset-0 bg-gradient-to-br from-brand-blue/20 via-brand-accent/15 to-transparent dark:from-brand-blue/30 dark:via-brand-accent/25 dark:to-transparent blur-3xl" />
+            <div className="absolute inset-0 bg-gradient-to-tl from-brand-accent/10 to-transparent dark:from-brand-accent/20 dark:to-transparent blur-2xl" />
+
+            <div className="relative bg-gradient-to-br from-white/60 via-brand-blue/5 to-brand-accent/10 dark:from-gray-800/80 dark:via-gray-800/60 dark:to-gray-800/40 rounded-xl p-12 w-full flex items-center justify-center backdrop-blur-sm border border-gray-200/50 dark:border-transparent shadow-sm dark:shadow-[0_8px_32px_rgba(11,140,233,0.15),0_0_0_1px_rgba(255,255,255,0.02)]">
               <img
-                src={`${base}images/SabrLabs-logo.png`}
+                src={`${base}logo.svg`}
                 alt="Sabr Labs"
-                className="max-w-xs md:max-w-sm w-full h-auto"
+                className="max-w-xs md:max-w-sm w-full h-auto drop-shadow-md"
               />
             </div>
           </div>

@@ -68,46 +68,11 @@ const Navbar: React.FC<NavbarProps> = ({ base = "" }) => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href={base || "/"} className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-brand-blue to-emerald-400 rounded-lg flex items-center justify-center">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <rect
-                  x="2"
-                  y="2"
-                  width="5"
-                  height="5"
-                  rx="1"
-                  fill="white"
-                  opacity="0.9"
-                />
-                <rect
-                  x="9"
-                  y="2"
-                  width="5"
-                  height="5"
-                  rx="1"
-                  fill="white"
-                  opacity="0.7"
-                />
-                <rect
-                  x="2"
-                  y="9"
-                  width="5"
-                  height="5"
-                  rx="1"
-                  fill="white"
-                  opacity="0.7"
-                />
-                <rect
-                  x="9"
-                  y="9"
-                  width="5"
-                  height="5"
-                  rx="1"
-                  fill="white"
-                  opacity="0.5"
-                />
-              </svg>
-            </div>
+            <img
+              src={`${base}favicon.svg`}
+              alt="Sabr Labs"
+              className="h-8 w-auto"
+            />
             <span className="text-xl font-bold text-gray-900 dark:text-white">
               Sabr Labs
             </span>
