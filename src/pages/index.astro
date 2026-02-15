@@ -1,8 +1,8 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar';
-import Hero from '../components/Hero';
-import Footer from '../components/Footer';
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import Footer from "../components/Footer";
 
 const base = import.meta.env.BASE_URL;
 ---
@@ -15,88 +15,151 @@ const base = import.meta.env.BASE_URL;
   <section id="projects" class="py-20 bg-gray-50 dark:bg-gray-800/50">
     <div class="container mx-auto px-6">
       <div class="text-center mb-16">
-        <p class="text-brand-blue text-xs font-semibold uppercase tracking-widest mb-3">Our Projects</p>
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">What We've Built</h2>
+        <p
+          class="text-brand-blue text-xs font-semibold uppercase tracking-widest mb-3"
+        >
+          Our Projects
+        </p>
+        <h2
+          class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4"
+        >
+          What We've Built
+        </h2>
         <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-          Tools we created to solve real problems in our own lives — and hopefully yours too.
+          Tools we created to solve real problems in our own lives — and
+          hopefully yours too.
         </p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
         <!-- Birth Your Way -->
-        <a href="https://www.birthplan.co.uk/" target="_blank" rel="noopener noreferrer" class="block" aria-label="Visit Birth Your Way project website">
-        <div class="group rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 hover:shadow-xl transition-all duration-300 cursor-pointer">
-          <div class="bg-gradient-to-br from-pink-50/70 to-rose-50/70 dark:from-pink-900/20 dark:to-rose-900/20 p-6 flex items-center justify-center relative overflow-hidden">
-            <img
-              src={`${base}images/birth-your-way-screenshot.png`}
-              alt="Birth Your Way screenshot"
-              class="rounded-lg shadow-md w-full h-auto max-h-64 object-cover"
-            />
-          </div>
-          <div class="p-6">
-            <div class="flex items-center gap-3 mb-4">
-              <img src={`${base}images/birth-your-way-logo.png`} alt="Birth Your Way logo" class="w-10 h-10 rounded-lg" />
-              <div>
-                <h3 class="text-xl font-bold text-gray-900 dark:text-white">Birth Your Way</h3>
-                <span class="text-xs font-semibold text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full">Health & Planning</span>
-              </div>
+        <a
+          href="https://www.birthplan.co.uk/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block"
+          aria-label="Visit Birth Your Way project website"
+        >
+          <div
+            class="group rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 hover:shadow-xl transition-all duration-300 cursor-pointer"
+          >
+            <div
+              class="bg-gradient-to-br from-pink-50/70 to-rose-50/70 dark:from-pink-900/20 dark:to-rose-900/20 p-6 flex items-center justify-center relative overflow-hidden"
+            >
+              <img
+                src={`${base}images/birth-your-way-screenshot.png`}
+                alt="Birth Your Way screenshot"
+                class="rounded-lg shadow-md w-full h-auto max-h-64 object-cover"
+              />
             </div>
-            <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-              A personalised birth plan generator that helps expectant parents create detailed,
-              informed birth plans. Answer guided questions and receive a comprehensive plan ready
-              to share with your healthcare provider.
-            </p>
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <img
+                  src={`${base}images/birth-your-way-logo.png`}
+                  alt="Birth Your Way logo"
+                  class="w-10 h-10 rounded-lg"
+                />
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 dark:text-white">
+                    Birth Your Way
+                  </h3>
+                  <span
+                    class="text-xs font-semibold text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full"
+                    >Health & Planning</span
+                  >
+                </div>
+              </div>
+              <p
+                class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed"
+              >
+                A personalised birth plan generator that helps expectant parents
+                create detailed, informed birth plans. Answer guided questions
+                and receive a comprehensive plan ready to share with your
+                healthcare provider.
+              </p>
+            </div>
           </div>
-        </div>
         </a>
 
         <!-- LifeVault -->
-        <a href="https://lifevault.sabrlabs.co.uk/" target="_blank" rel="noopener noreferrer" class="block" aria-label="Visit LifeVault project website">
-        <div class="group rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 hover:shadow-xl transition-all duration-300 cursor-pointer">
-          <div class="bg-gradient-to-br from-blue-50/70 to-cyan-50/70 dark:from-blue-900/20 dark:to-cyan-900/20 p-6 flex items-center justify-center relative overflow-hidden">
-            <img
-              src={`${base}images/main-dashboard-screenshot.png`}
-              alt="LifeVault dashboard screenshot"
-              class="rounded-lg shadow-md w-full h-auto max-h-64 object-cover"
-            />
-          </div>
-          <div class="p-6">
-            <div class="flex items-center gap-3 mb-4">
-              <img src={`${base}images/life-vault-logo.png`} alt="LifeVault logo" class="w-10 h-10 rounded-lg" />
-              <div>
-                <h3 class="text-xl font-bold text-gray-900 dark:text-white">LifeVault</h3>
-                <span class="text-xs font-semibold text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full">Productivity</span>
-              </div>
+        <a
+          href="https://lifevault.sabrlabs.co.uk/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block"
+          aria-label="Visit LifeVault project website"
+        >
+          <div
+            class="group rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 hover:shadow-xl transition-all duration-300 cursor-pointer"
+          >
+            <div
+              class="bg-gradient-to-br from-blue-50/70 to-cyan-50/70 dark:from-blue-900/20 dark:to-cyan-900/20 p-6 flex items-center justify-center relative overflow-hidden"
+            >
+              <img
+                src={`${base}images/main-dashboard-screenshot.png`}
+                alt="LifeVault dashboard screenshot"
+                class="rounded-lg shadow-md w-full h-auto max-h-64 object-cover"
+              />
             </div>
-            <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-              A personal file organiser that keeps your important documents, records, and files
-              neatly structured and easily accessible. Take control of your digital life with
-              a simple, intuitive interface.
-            </p>
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <img
+                  src={`${base}images/life-vault-logo.png`}
+                  alt="LifeVault logo"
+                  class="w-10 h-10 rounded-lg"
+                />
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 dark:text-white">
+                    LifeVault
+                  </h3>
+                  <span
+                    class="text-xs font-semibold text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full"
+                    >Productivity</span
+                  >
+                </div>
+              </div>
+              <p
+                class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed"
+              >
+                A personal file organiser that keeps your important documents,
+                records, and files neatly structured and easily accessible. Take
+                control of your digital life with a simple, intuitive interface.
+              </p>
+            </div>
           </div>
-        </div>
         </a>
       </div>
     </div>
   </section>
 
   <!-- About / CTA Section -->
-  <section id="about" class="py-20 bg-gradient-to-br from-gray-900 to-gray-800 dark:from-gray-950 dark:to-gray-900 text-white">
+  <section
+    id="about"
+    class="py-20 bg-gradient-to-br from-gray-900 to-gray-800 dark:from-gray-950 dark:to-gray-900 text-white"
+  >
     <div class="container mx-auto px-6">
       <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Built by Engineers, for Everyone</h2>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Built by Engineers, for Everyone
+        </h2>
         <p class="text-gray-300 max-w-xl mx-auto">
-          We're Ahmed and Ammaar — two engineers who believe the best software comes from
-          solving your own problems first.
+          We're Ahmed and Ammaar — two engineers who believe the best software
+          comes from solving your own problems first.
         </p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto mb-12">
-        <div class="text-center bg-gray-800/50 dark:bg-gray-900/50 rounded-2xl p-8">
-          <p class="text-4xl md:text-5xl font-extrabold text-brand-blue mb-2">2</p>
+        <div
+          class="text-center bg-gray-800/50 dark:bg-gray-900/50 rounded-2xl p-8"
+        >
+          <p class="text-4xl md:text-5xl font-extrabold text-brand-blue mb-2">
+            2
+          </p>
           <p class="text-gray-400 text-sm">Projects Live</p>
         </div>
-        <div class="text-center bg-gray-800/50 dark:bg-gray-900/50 rounded-2xl p-8">
+        <div
+          class="text-center bg-gray-800/50 dark:bg-gray-900/50 rounded-2xl p-8"
+        >
           <p class="text-4xl md:text-5xl font-extrabold text-white mb-2">2</p>
           <p class="text-gray-400 text-sm">Founders</p>
         </div>
