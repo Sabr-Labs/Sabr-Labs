@@ -64,6 +64,7 @@ If something similar already exists, extend it and document why a new component 
 - Keep changes minimal and scoped to the requested feature/fix.
 - Avoid `any`; use inferred types or explicit types for public APIs.
 - Add comments only for non-obvious decisions.
+- Do NOT create new markdown files to document changes or summarize work unless specifically requested by the user.
 
 ## 7. Scripts (Reference)
 
